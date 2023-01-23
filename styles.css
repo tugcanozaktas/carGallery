@@ -1,8 +1,13 @@
-body{
+html{
     scroll-behavior: smooth;
+}
+body{
     margin: 0;
-    padding: 0;
-    background: linear-gradient(90deg, #222, #000);
+    height: 100%;
+    padding:0px;
+    padding-top: 100px;
+
+    background: linear-gradient(180deg, rgb(22, 22, 22), #000);
     font-family: 'Open Sans', sans-serif;
 }
 h1{
@@ -13,11 +18,12 @@ h1{
     border-radius: 0.5em;
 }
 header{
+    position: fixed;
+    top: 0;
     color: white;
     width: 100%;
     background-color: #222;
 } 
-
 header nav{
     padding: 8px;
 }
@@ -62,6 +68,7 @@ header nav ul li a{
     text-align: center;
     margin-top: 5px;
 }
+
 .car-window #img-car{
     border: none;
 }
@@ -75,10 +82,80 @@ header nav ul li a{
     color: white;
 }
 .car-window li a:hover{
-    color: #666
+    color: #666;
 }
 .car-window .info-car{
     background-color: #222;
+}
+
+#about-us #paragraph p{
+    color: white;
+    padding: 0em 2em 0em 2em;
+    text-align: justify;
+}
+#categories-section a{
+    width: 100%;
+    margin: 0.5em 1em;
+    padding: 1em;
+    border-radius: 0.5em;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    background-color: #222;
+    transition: color 300ms ease-in-out;
+    transition: background-color 300ms ease-in-out;
+}
+#categories-section a:hover{
+    color: #000;
+    background-color: #333;
+    font-weight: bold;
+}
+#form-section{
+    display: flex;
+    justify-content: center;
+}
+#form-section form{
+    width: 400px;
+    text-align: center;
+}
+#name, #email{
+    border-radius: 0.5em;
+    width: 100%;
+    height: 35px;
+}
+#comment{
+    border-radius: 0.5em;
+    width: 100%;
+    height: 100px;
+}
+button{
+    width: 75%;
+    height: 10%;
+    background-color: #222;
+    border: none;
+    color: white;
+    margin-top: 1em;
+    border-radius: 0.5em;
+    transition: color 300ms ease-in-out;
+    transition: background-color 300ms ease-in-out;
+}
+button:hover{
+    color: #000;
+    background-color: #333;
+    font-weight: bold;
+}
+#form-section form label{
+    color: white;
+}
+footer{
+    bottom: 0;
+    margin-top: 50px;
+    color: white;
+    background-color: #222;
+}
+footer p{
+    padding: 1.5em 2em;
+    text-align: center;
 }
 @media screen and (max-width: 420px) {
     body{
@@ -88,8 +165,18 @@ header nav ul li a{
         flex-direction: column;
         align-items: center;
     }
+    .flex-categories{
+        margin: 1.5em 6em;
+    }
     .car-window{
         max-width: 75%;
         align-items: center;
+    }
+    #form-section form{
+        width: 100%;
+        margin: 1em 2em;
+    }
+    #name, #email{
+        height: 30px;
     }
 }
